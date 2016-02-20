@@ -8,37 +8,47 @@
         <version>3.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>chapter2</artifactId>
+    <name>第二章示例</name>
+    <description>Spring IOC</description>
     <dependencies>
-        <!--依赖的spring模块类库-->
+        <!--① 依赖的Spring模块类库 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>
-        <!--依赖的公共模块类库-->
         <dependency>
-            <groupId>commons-dbcp</groupId>
-            <artifactId>commons-dbcp</artifactId>
-            <version>${commons-dbcp.version}</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
+            <artifactId>aspectjtools</artifactId>
             <version>${aspectjweaver.version}</version>
         </dependency>
-        <!-- AOP dependency -->
         <dependency>
             <groupId>cglib</groupId>
-            <artifactId>cglib</artifactId>
+            <artifactId>cglib-nodep</artifactId>
             <version>2.2</version>
         </dependency>
+
+        <!--② 依赖的测试类库-->
         <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>${apache.commons.version}</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
         </dependency>
     </dependencies>
-
 </project>
